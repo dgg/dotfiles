@@ -75,18 +75,18 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker colored-man-pages jenv nvm macos zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git docker colored-man-pages nvm macos zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 
-source /usr/local/etc/bash_completion.d/az
+source /opt/homebrew/etc/bash_completion.d/az
 source <(kubectl completion zsh)
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -123,5 +123,3 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-source /Users/dgon/.docker/init-zsh.sh || true # Added by Docker Desktop
