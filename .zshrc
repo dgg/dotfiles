@@ -88,6 +88,7 @@ export NVM_DIR="$HOME/.nvm"
 
 source /opt/homebrew/etc/bash_completion.d/az
 source <(kubectl completion zsh)
+source <(atlas completion zsh)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
